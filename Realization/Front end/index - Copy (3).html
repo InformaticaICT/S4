@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesmethode Nederlands.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Creeeren, delen en beoordelen van lesmethodes Nederlands</h1>
+        <p>Vind gestructureerd lesmateriaal op basis van kerndoelen, leesdoelen en onderwijsniveaus.</p>
+
+    </header>
+
+    <section class="auth-section">
+        <h2>Inloggen</h2>
+        <form class="login-form">
+            <label for="email">E-mailadres:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Wachtwoord:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Inloggen</button>
+            <a href="#" class="forgot-password">Wachtwoord vergeten?</a>
+        </form>
+
+        <h2>Wachtwoord wijzigen</h2>
+        <form class="change-password-form">
+            <label for="current-password">Huidig wachtwoord:</label>
+            <input type="password" id="current-password" name="current-password" required>
+
+            <label for="new-password">Nieuw wachtwoord:</label>
+            <input type="password" id="new-password" name="new-password" required>
+
+            <label for="confirm-password">Bevestig nieuw wachtwoord:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">Wijzig wachtwoord</button>
+        </form>
+    </section>
+
+
+    <main>
+        <section class="search">
+            <h2>Lesmateriaal zoeken</h2>
+            <form>
+                <label for="kerndoel">Selecteer kerndoel:</label>
+                <select id="kerndoel" name="kerndoel">
+                    <option value="">Kies een kerndoel</option>
+                    <option value="samenvatten">Samenvatten</option>
+                    <option value="hoofd-bijzaken">Hoofd- en bijzaken onderscheiden</option>
+                    <option value="werkstuk">Werkstuk schrijven</option>
+                    <option value="betoog">Betoog schrijven</option>
+                </select>
+
+                <label for="niveau">Onderwijsniveau:</label>
+                <select id="niveau" name="niveau">
+                    <option value="">Kies een niveau</option>
+                    <option value="praktijk">PRAKTIJK</option>
+                    <option value="vmbo">VMBO</option>
+                    <option value="havo">HAVO</option>
+                    <option value="vwo">VWO</option>
+                </select>
+
+                <label for="vakgebied">Vakgebied:</label>
+                <select id="vakgebied" name="vakgebied">
+                    <option value="">Kies een vakgebied</option>
+                    <option value="geschiedenis">Geschiedenis</option>
+                    <option value="aardrijkskunde">Aardrijkskunde</option>
+                    <option value="wiskunde">Wiskunde</option>
+                    <option value="natuurkunde">Natuurkunde</option>
+                    <option value="scheikunde">Scheikunde</option>
+                    <option value="biologie">Biologie</option>
+                </select>
+
+                <button type="submit">Zoek</button>
+            </form>
+        </section>
+
+        <section class="materials">
+            <h2>Beschikbaar lesmateriaal</h2>
+            <div class="matial-card">
+                <h3>Samenvatten - HAVO niveau</h3>
+                <p>Doel: leerlingen leren samenvatten van teksten.</p>
+                <p><strong>Vakgebied:</strong> Geschiedenis</p>
+                <p><strong>Bron:</strong> Fontys lerarenopleiding Tilburg, in APA-stijl.</p>
+                <button>Bekijk lesmateriaal</button>
+            </div>
+        </section>
+
+
+        <section class="create-material">
+            <h2>Creeer nieuw lesmateriaal / lesmethode</h2>
+            <form>
+
+                <label for="boeken">Gelezen boeken:</label>
+                <input type="text" id="boeken" name="boeken">
+
+                <label for="fase">Fase van de leescyclus:</label>
+                <input type="text" id="fase" name="fase">
+
+                <label for="doel-opdracht">Doel van de opdracht:</label>
+                <input type="text" id="doel-opdracht" name="doel-opdracht">
+
+                <label for="aanwijzingen">Aanwijzingen voor uitvoering:</label>
+                <textarea id="aanwijzingen" name="aanwijzingen"></textarea>
+
+                <label for="tijdsindicatie">Tijdsindicatie:</label>
+                <input type="text" id="tijdsindicatie" name="tijdsindicatie">
+
+                <label for="aanpak">Hoe pak je het aan?</label>
+                <textarea id="aanpak" name="aanpak"></textarea>
+
+                <label for="voorbeeld">Voorbeeld van uitgevoerde opdracht:</label>
+                <textarea id="voorbeeld" name="voorbeeld"></textarea>
+
+                <label for="motivatie">Motivatie voor leerlingen:</label>
+                <textarea id="motivatie" name="motivatie"></textarea>
+
+                <label for="bijlagen">Bijlagen uploaden:</label>
+                <input type="file" id="bijlagen" name="bijlagen" multiple>
+
+                <button type="submit">Opslaan</button>
+            </form>
+        </section>
+
+        <section class="peer-review">
+            <h2>Peer review van lesmethode</h2>
+            <div class="review-card">
+                <h3>Opdracht: Samenvatten van teksten</h3>
+                <p>Beoordeel het lesmateriaal op basis van de criteria.</p>
+                <button>Beoordeel</button>
+                <p><em>Minimaal drie beoordelingen nodig voor goedkeuring.</em></p>
+            </div>
+        </section>
+
+
+        <section class="leerlijn-generator">
+            <h2>Leerlijn generator</h2>
+            <p>Genereer een lesprogramma op basis van ingevoerde gegevens.</p>
+            <form>
+                <label for="uren-per-week">Aantal uren per week:</label>
+                <input type="number" id="uren-per-week" name="uren-per-week">
+
+                <label for="periode">Periode (in weken):</label>
+                <input type="number" id="periode" name="periode">
+
+                <button type="submit">Genereer leerlijn</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Gemaakt voor docenten Nederlands. Gebaseerd op het nieuwe curriculum en onderwijsdoelen.</p>
+    </footer>
+</body>
+
+</html>

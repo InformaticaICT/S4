@@ -1,0 +1,128 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+
+            <main>
+                <form class="product-form"
+                    action="/admin/<% if (editing) { %>edit-teaching-material<% } else { %>add-teaching-material<% } %>"
+                    method="POST">
+
+                    <div class="form-control">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title"
+                            value="<% if (editing) { %><%= product.title %><% } %>">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="level-select">Kies een niveau:</label>
+                        <select id="level-select" name="level">
+                            <option value="">--Please choose an option--</option>
+                            <option value="praktijkonderwijs" <% if (editing && product.level==='praktijkonderwijs' ) {
+                                %>selected<% } %>
+                                    >praktijkonderwijs</option>
+                            <option value="vmbo basis" <% if (editing && product.level==='vmbo basis' ) { %>selected<% }
+                                    %>>vmbo basis
+                            </option>
+                            <option value="vmbo kader" <% if (editing && product.level==='vmbo kader' ) { %>selected<% }
+                                    %>>vmbo kader
+                            </option>
+                            <option value="vmbo-t" <% if (editing && product.level==='vmbo-t' ) { %>selected<% } %>
+                                    >vmbo-t</option>
+                            <option value="havo" <% if (editing && product.level==='havo' ) { %>selected<% } %>>havo
+                            </option>
+                            <option value="vwo" <% if (editing && product.level==='vwo' ) { %>selected<% } %>>vwo
+                            </option>
+                        </select>
+
+                    </div>
+                    <div class="form-control">
+                        <label for="duration">Duur van de les in minuten: </label>
+                        <input type="number" name="duration" id="duration" step="1"
+                            value="<% if (editing) { %><%= product.duration %><% } %>">
+
+                    </div>
+                    <div class="form-control">
+                        <label for="domain-select">Kies een domein: </label>
+                        <select id="domain-select" name="domain">
+                            <option value="">--Please choose an option--</option>
+                            <option value="reading" <% if (editing && product.domain==='reading' ) { %>selected<% } %>
+                                    >leesvaardigheid
+                            </option>
+                            <option value="speaking skills" <% if (editing && product.domain==='speaking skills' ) { %>
+                                selected<% } %>
+                                    >spraakvaardigheid</option>
+                            <option value="literature" <% if (editing && product.domain==='literature' ) { %>selected<%
+                                    } %>>literatuur
+                            </option>
+                        </select>
+
+                    </div>
+                    <div class="form-control">
+                        <label for="purpose">Purpose of the lesson?</label>
+                        <textarea name="purpose" id="purpose"
+                            rows="5"><% if (editing) { %><%= product.purpose %><% } %></textarea>
+
+                    </div>
+                    <div class="form-control">
+                        <label for="preparation">Voorbereiding voor de docent</label>
+                        <label for="preparation">Welke materialen heb je gebruikt?</label>
+                        <label for="preparation">Wat zijn de werkvormen?</label>
+                        <label for="preparation">Een manier van het aanleren van nieuwe informatie</label>
+                        <label for="preparation">korte achtergrond / informatie toevoegen</label>
+                        <textarea name="preparation" id="preparation"
+                            rows="5"><% if (editing) { %><%= product.preparation %><% } %></textarea>
+                    </div>
+                    <div class="form-control">
+                        <label for="structure">Kan je beschrijven wat de opbouw van de les is?</label>
+                        <label for="structure">Binnen de lestijd doe je x dan x</label>
+                        <textarea name="structure" id="structure"
+                            rows="5"><% if (editing) { %><%= product.structure %><% } %></textarea>
+                    </div>
+                    <div class="form-control">
+                        <label for="activities">Kan je beschrijven wat de activiteiten zijn?</label>
+                        <label for="activities">Wat gebeurt er in de les?</label>
+                        <textarea name="activities" id="activities"
+                            rows="5"><% if (editing) { %><%= product.activities %><% } %></textarea>
+                    </div>
+                    <div class="form-control">
+                        <label for="Theoretical basis">Theoretische basis (didactische achtergrond)</label>
+                        <textarea name="theoreticalBasis" id="Theoretical basis"
+                            rows="5"><% if (editing) { %><%= product.theoreticalBasis %><% } %></textarea>
+                    </div>
+
+
+
+
+
+
+                    <div class="form-control">
+                        <label for="imageUrl">Image URL</label>
+                        <input type="text" name="imageUrl" id="imageUrl"
+                            value="<% if (editing) { %><%= product.imageUrl %><% } %>">
+                    </div>
+                    <div class="form-control">
+                        <label for="price">Price</label>
+                        <input type="number" name="price" id="price" step="0.01"
+                            value="<% if (editing) { %><%= product.price %><% } %>">
+                    </div>
+                    <div class="form-control">
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description"
+                            rows="5"><% if (editing) { %><%= product.description %><% } %></textarea>
+
+                    </div>
+                    <% if (editing) { %>
+                        <input type="hidden" value="<%= product._id %>" name="productId">
+
+
+                        <% } %>
+
+                            <button class="btn" type="submit">
+                                <% if (editing) { %>Update Teaching Material<% } else { %>Add Lessonmaterial<% } %>
+                            </button>
+                </form>
+            </main>
+            <%- include('../includes/end.ejs') %>

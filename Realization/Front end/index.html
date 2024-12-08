@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesmethode Nederlands.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+    <section class="create-material">
+        <h2>Creeer nieuw lesmateriaal / lesmethode / opdracht voor leesvaardigheid</h2>
+        <form>
+
+       
+       
+
+            <label for="niveau">Wat is het niveau?</label>
+            <select id="domain-select">
+                <option value="">--Please choose an option--</option>
+                <option value="praktijkonderwijs">Praktijkonderwijs</option>
+                <option value="vmbo basis">vmbo basis</option>
+                <option value="vmbo kader">vmbo kader</option>
+                <option value="vmbo-t">vmbo-t</option>
+                <option value="havo">havo</option>
+                <option value="vwo">vwo</option>
+            </select>
+
+            <label for="duration">Duur van de les in minuten</label>
+            <input type="text" id="duration-lesson" name="duration">
+
+            <label for="domain-select">Kies een domein: </label>
+            <select id="domain-select">
+                <option value="">--Please choose an option--</option>
+                <option value="reading">Leesvaardigheid</option>
+                <option value="speech">Spreekvaardigheid</option>
+                <option value="literature">Literatuur</option>
+            </select>
+
+            <label for="purpose">Wat is het doel van de les? Kan je dat beschrijven?</label>
+            <input type="text" id="purpose-lesson" name="purpose">
+
+
+
+            <label for="summary">Kan je een samenvatting schrijven van je lesmateriaal en bijbehorende
+                opdracht?</label>
+            <textarea id="summary" name="summary"></textarea>
+
+            <label for="working methods">Kan je de werkvormen beschrijven hoe de studenten kunnen werken?</label>
+            <label for="working methods">Bijvoorbeeld een manier van het aanleren van nieuwe informatie </label>
+            <label for="working methods">Korte achtergrond / informatie toevoegen</label>
+            <input type="text" id="working methods" name="working methods">
+
+            <label for="structure of the lesson">Opbouw van de les. </label>
+            <label for="structure of the lesson">Binnen de lestijd doe je x dan x </label>
+            <textarea id="structure of the lesson" name="structure of the lesson"></textarea>
+
+            <label for="activities">Wat gebeurt er in de les? </label>
+            <textarea id="activities" name="activities"></textarea>
+
+            <label for="theoretical basis">Theoretische basis </label>
+            <label for="theoretical basis">didactische achtergrond </label>
+            <textarea id="theoretical basis" name="theoretical basis"></textarea>
+      
+
+            <label for="bijlagen">Bijlagen uploaden:</label>
+            <input type="file" id="bijlagen" name="bijlagen" multiple>
+
+            <button type="submit">Opslaan</button>
+        </form>
+    </section>
+
+
+    </main>
+
+    <footer>
+        <p>Gemaakt voor docenten Nederlands. Gebaseerd op het nieuwe curriculum en onderwijsdoelen.</p>
+    </footer>
+</body>
+
+</html>

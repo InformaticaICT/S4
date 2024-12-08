@@ -1,0 +1,22 @@
+<div class="backdrop"></div>
+<header class="main-header">
+    <button id="side-menu-toggle">Menu</button>
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+            <li class="main-header__item">
+                <a class="<%= path === '/teaching-materials' ? 'active' : '' %>"
+                    href="/teaching-materials">Assignments</a>
+            </li>
+            <li class="main-header__item">
+                <a class="<%= path === '/admin/add-teaching-material' ? 'active' : '' %>"
+                    href="/admin/add-teaching-material">Add Material
+                </a>
+            </li>
+            <li class="main-header__item">
+                <a class="<%= path === '/admin/index' ? 'active' : '' %>"
+                    href="/lesMaPr/views/teaching-materials/index.ejs">Admin
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
